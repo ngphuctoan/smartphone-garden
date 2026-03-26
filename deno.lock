@@ -1,11 +1,25 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@std/internal@^1.0.12": "1.0.12",
+    "jsr:@std/path@^1.1.4": "1.1.4",
     "npm:@prisma/adapter-better-sqlite3@^7.5.0": "7.5.0",
     "npm:@prisma/client@^7.5.0": "7.5.0_prisma@7.5.0__@types+react@19.2.14__react@19.2.4__react-dom@19.2.4___react@19.2.4_@types+react@19.2.14_react@19.2.4_react-dom@19.2.4__react@19.2.4",
+    "npm:eta@^4.5.1": "4.5.1",
     "npm:express@^5.2.1": "5.2.1",
     "npm:prisma@*": "7.5.0_@types+react@19.2.14_react@19.2.4_react-dom@19.2.4__react@19.2.4",
     "npm:prisma@^7.5.0": "7.5.0_@types+react@19.2.14_react@19.2.4_react-dom@19.2.4__react@19.2.4"
+  },
+  "jsr": {
+    "@std/internal@1.0.12": {
+      "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
+    },
+    "@std/path@1.1.4": {
+      "integrity": "1d2d43f39efb1b42f0b1882a25486647cb851481862dc7313390b2bb044314b5",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    }
   },
   "npm": {
     "@chevrotain/cst-dts-gen@10.5.0": {
@@ -402,6 +416,9 @@
     },
     "escape-html@1.0.3": {
       "integrity": "sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow=="
+    },
+    "eta@4.5.1": {
+      "integrity": "sha512-EaNCGm+8XEIU7YNcc+THptWAO5NfKBHHARxt+wxZljj9bTr/+arRoOm9/MpGt4n6xn9fLnPFRSoLD0WFYGFUxQ=="
     },
     "etag@1.8.1": {
       "integrity": "sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg=="
@@ -1055,8 +1072,10 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@std/path@^1.1.4",
       "npm:@prisma/adapter-better-sqlite3@^7.5.0",
       "npm:@prisma/client@^7.5.0",
+      "npm:eta@^4.5.1",
       "npm:express@^5.2.1",
       "npm:prisma@^7.5.0"
     ]
