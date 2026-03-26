@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "server:watch": "deno run --watch main.ts"
+  },
+  "imports": {
+    "express": "npm:express@^5.2.1"
+  }
+}
