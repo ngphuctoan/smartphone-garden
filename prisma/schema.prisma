@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client"
+  output   = "./generated"
+  runtime  = "deno"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Product {
+  id   String @id @default(cuid(2))
+  slug String @unique
+  name String
+}
