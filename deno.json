@@ -1,7 +1,7 @@
 {
   "nodeModulesDir": "auto",
   "tasks": {
-    "server:watch": "deno run -A --env-file --watch main.ts",
+    "server:watch": "deno run -A --env-file --watch=./views main.ts",
     "db:push": "deno run -A --env-file npm:prisma db push",
     "db:generate": "deno run -A --env-file npm:prisma generate"
   },
