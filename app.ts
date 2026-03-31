@@ -7,6 +7,8 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+app.use(express.static("public"));
+
 const eta = new Eta({
   views: path.join(import.meta.dirname, "views"),
   cache: true,
