@@ -1,0 +1,23 @@
+{
+  "name": "smartphone-garden",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "server:watch": "tsx watch --env-file=./.env --include ./views app.ts",
+    "db:push": "prisma db push",
+    "db:generate": "prisma generate"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
+    "prisma": "^7.6.0",
+    "tsx": "^4.21.0"
+  },
+  "dependencies": {
+    "@prisma/adapter-libsql": "^7.6.0",
+    "@prisma/client": "^7.6.0",
+    "dotenv": "^17.3.1",
+    "eta": "^4.5.1",
+    "express": "^5.2.1"
+  }
+}

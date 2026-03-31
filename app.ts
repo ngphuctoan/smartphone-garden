@@ -1,15 +1,14 @@
-// @ts-types="npm:@types/express"
 import express from "express";
 import { Eta } from "eta";
-import * as path from "@std/path";
+import path from "node:path";
 import router from "#/routers.ts";
 
-const PORT = Deno.env.get("PORT") || 3000;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
 const eta = new Eta({
-  views: path.join(Deno.cwd(), "views"),
+  views: path.join(import.meta.dirname, "views"),
   cache: true,
 });
 
